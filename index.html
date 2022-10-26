@@ -12,16 +12,16 @@
 <body>
     <div class="container">
         <div class="clock">
-            <input type="text" class="number" maxlength="2" value="00"> <span>hs</span>
-            <input type="text" class="number" maxlength="2" value="00"> <span>min</span>
-            <input type="text" class="number" maxlength="2" value="00"> <span>seg</span>
-            <div class="buttons">
-                <button id="play" onclick="startTimer()"></button>
-                <button id="stop" onclick="stopTimer()"></button>
-            </div>
+            <input class="number" type="text" maxlength="2" value="00"><span>hs</span>
+            <input class="number" type="text" maxlength="2" value="00"><span>min</span>
+            <input class="number" type="text" maxlength="2" value="00"><span>seg</span>
+        </div>
+        <div class="buttons">
+            <button id="play" onclick="startTimer()"></button>
+            <button id="stop" onclick="stopTimer()"></button>
         </div>
     </div>
-    <script src="/js/timer.js"></script>
+    <script src="js/timer.js"></script>
 </body>
 
 </html>
