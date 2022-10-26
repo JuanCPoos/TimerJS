@@ -29,8 +29,8 @@ function setTimer() {
     /** actualiza la pantalla con hs-min-seg
     y actualiza también el title de la pestaña*/
     clock.innerHTML = `<p class="number">${hours > 9 ? hours : ('0' + hours)}</p><span>hs</span> 
-    <p class="number">${minutes > 9 ? minutes : ('0' + minutes)}</p><span>hs</span>
-    <p class="number">${seconds > 9 ? seconds : ('0' + seconds)}</p><span>hs</span>`;
+    <p class="number">${minutes > 9 ? minutes : ('0' + minutes)}</p><span>min</span>
+    <p class="number">${seconds > 9 ? seconds : ('0' + seconds)}</p><span>sec</span>`;
 
     document.title = `${hours > 9 ? hours : ('0' + hours)}:${minutes > 9 ? minutes : ('0' + minutes)}:${seconds > 9 ? seconds : ('0' + seconds)}`;
 }
@@ -49,9 +49,12 @@ function runner(){
         seconds--;    
     } else {
         if (minutes > 0) {
-            minutes--;
+            seconds = "59";
+            minutes--;            
         }else {
             if (hours > 0) {
+                seconds = "59";
+                minutes = "59";
                 hours--;
             } else {
                 alarm.play();
